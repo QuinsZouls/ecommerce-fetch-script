@@ -32,5 +32,11 @@ Nota: asegurarse de contar con el volumen de salida, de lo contrario no se guard
 ```bash
 docker-compose up -d
 ```
+# Pruebas
+Para realizar las pruebas unitarias y generar un reporte HTML:
+```bash
+pytest --html=report.html --self-contained-html
+```
+
 # Incidencias
 Debido al uso de selenium, después de varios intentos corriendo el script la página comenzó a bloquear toda actividad, para ello se implementó la librería de python undetected-chromedriver para evitar dicho bloqueo.
