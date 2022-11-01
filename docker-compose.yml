@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app-script-service
+    volumes:
+      - ./output:/output
+    environment:
+      - TARGET_URL=https://www.soriana.com
+      - OUTPUT_FILE=/output/result2.json
+      - DRIVER_PATH=/usr/bin/chromedriver
+      - EXEC_ENVIRONMENT=server
